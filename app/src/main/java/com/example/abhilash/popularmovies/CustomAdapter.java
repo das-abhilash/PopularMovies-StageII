@@ -12,13 +12,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class custom_adapter extends ArrayAdapter<trailer> {
+public class CustomAdapter extends ArrayAdapter<trailer> {
 
-    private ArrayList<trailer> tr;
+   /* private ArrayList<trailer> tr;*/
 
-    public custom_adapter(Context context, ArrayList<trailer> tr) {
+    public CustomAdapter(Context context, ArrayList<trailer> tr) {
         super(context, R.layout.list_layout, tr);
-        this.tr = tr;
+       // this.tr = tr;
     }
 
     private static class ViewHolder {

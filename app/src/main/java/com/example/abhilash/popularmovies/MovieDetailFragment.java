@@ -307,7 +307,7 @@ public class MovieDetailFragment extends Fragment implements LoaderManager.Loade
     public void TrailerOnClick(final ArrayList<trailer> tr) {
 
 
-        ListAdapter myAdapter = new custom_adapter(getContext(), tr);
+        ListAdapter myAdapter = new CustomAdapter(getContext(), tr);
 
         TList.setAdapter(myAdapter);
         // TList.setFocusable(true);
@@ -339,7 +339,7 @@ public class MovieDetailFragment extends Fragment implements LoaderManager.Loade
     public void Displayreview(final ArrayList<review> re) {
 
         if (re != null) {
-            ListAdapter myAdapter = new custom_adapter_review(getContext(), re);
+            ListAdapter myAdapter = new CustomAdapterReview(getContext(), re);
 
             RList.setAdapter(null);
             RList.setAdapter(myAdapter);
