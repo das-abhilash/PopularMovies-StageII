@@ -242,13 +242,17 @@ public class MovieDetailFragment extends Fragment implements LoaderManager.Loade
         Share_trailer = trlr.get(0).getKey();
         TrailerOnClick(trlr);
         final String Movie_id = data.getString(COL_MOVIE_ID);
+       String favorite_key= String.valueOf(Utility.getSort("favorite", getActivity()));
         Cursor cur = getActivity().getContentResolver().query(MovieContract.MovieEntry.CONTENT_URI,
                 new String[]{MovieContract.MovieEntry.COLUMN_MOVIE_ID},
-                MovieContract.MovieEntry.COLUMN_MOVIE_ID
-                        + "= ?", new String[]{Movie_id}, null);
+                MovieContract.MovieEntry.COLUMN_SORT_KEY + " = ? AND " + MovieContract.MovieEntry.COLUMN_MOVIE_ID
+                        + "= ?", new String[]{favorite_key,Movie_id}, null);
+              //  MovieContract.MovieEntry.COLUMN_MOVIE_ID
+                    //    + "= ?", new String[]{Movie_id}, null);
         int i = cur.getCount();
         int j = 0;
-        if (i == 2) {
+       // if (i == 2) {
+        if (i != 0) {
             FAVORITE = true;
             favBtn.setText("Remove Fav");
         } else {
