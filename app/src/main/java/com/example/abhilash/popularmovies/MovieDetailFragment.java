@@ -325,11 +325,10 @@ public class MovieDetailFragment extends Fragment implements LoaderManager.Loade
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        // Intent i = new Intent();//DetailActivity.class); // getContext(),getActivity()
 
                         trailer tra = tr.get(position);
-                        String path = tra.getKey();
-                        String video_path = path;
+                        String video_path = tra.getKey();
+
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(video_path));
                         startActivity(intent);
                     }

@@ -203,17 +203,17 @@ public class MovieListActivity extends AppCompatActivity implements LoaderManage
         client.disconnect();
     }
 
-    public class SimpleItemRecyclerViewAdapter
+   /* public class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
         private final List<DummyContent.DummyItem> mValues;
 
         public SimpleItemRecyclerViewAdapter(List<DummyContent.DummyItem> items) {
             mValues = items;
-        }
+        }*/
 
 
-        @Override
+       /* @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.movie_list_content, parent, false);
@@ -277,34 +277,5 @@ public class MovieListActivity extends AppCompatActivity implements LoaderManage
             super.onViewRecycled(holder);
         }
 
-        /*@Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-            getMenuInflater().inflate(R.menu.menu_main, menu);
-            return true;
-        }
-
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-
-            int id = item.getItemId();
-
-            if (id == R.id.action_settings) {
-                Intent intent = new Intent(this, Settings.class);
-                startActivity(intent);
-            }
-            else if (id == R.id.delete_fav) {
-                this.getContentResolver().delete(MovieContract.MovieEntry.CONTENT_URI,
-                        null, null);
-            }
-            else if (id == R.id.refresh){
-                onSortChanged();
-            }
-
-            return true;
-        }*/
-
-
-
-
-    }
+          }*/
 }

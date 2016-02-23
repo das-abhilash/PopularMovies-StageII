@@ -12,11 +12,11 @@ import java.util.ArrayList;
 
 public class CustomAdapterReview  extends ArrayAdapter<review> {
 
-  //private ArrayList<review> re = new ArrayList<review>();
+
 
     public CustomAdapterReview(Context context, ArrayList<review> re) {
         super(context, R.layout.list_layout_review, re);
-       // this.re = re;
+
     }
 
     @Override
@@ -25,9 +25,7 @@ public class CustomAdapterReview  extends ArrayAdapter<review> {
         LayoutInflater myInflater = LayoutInflater.from(getContext());
         View customView = myInflater.inflate(R.layout.list_layout_review, null);
 
-        //////////////////
         review rv = getItem(position);
-        //////////////////
 
         TextView author_text = (TextView) customView.findViewById(R.id.author_text);
         TextView content_text = (TextView) customView.findViewById(R.id.content_text);
